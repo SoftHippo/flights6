@@ -102,3 +102,7 @@ update dbo.airlines set IcaoCode = 'SWA', Name = 'Southwest Airlines Co.' where 
 update dbo.airlines set IcaoCode = 'AWE', Name = 'US Airways' where IataCode = 'US';
 
 commit;
+
+BEGIN TRANSACTION;
+update dbo.airlines set IcaoCode = 'GWI', name = 'Germanwings GmbH' where IataCode = '4U';
+commit;
