@@ -36,11 +36,15 @@
 				FlightLoader.LoadFlightsCsv(false, true, true);
 				break;
 
-            // case "firstsetup":
-            //     RunCsvImport();
-            //     break;
+			case "Flighty":
+				Flighty.CheckFlightyCsv();
+				break;
 
-            default:
+            // case "firstsetup":
+			//     RunCsvImport();
+			//     break;
+
+			default:
                 Console.WriteLine($"Unknown command: {command}");
                 Console.WriteLine("Available commands: import, query, health");
                 break;

@@ -18,19 +18,7 @@
     <None Update="appsettings.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <!-- <None Update="Flights4-aircraft.csv">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Flights4-airlines.csv">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Flights4-airports.csv">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None> -->
-    <None Update="csv/aircraft 27ed0976205d818eb340e01590bdc127_all.csv">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="csv/f5-log 278d0976205d81aeb40fc1891c3f0bfd_all.csv">
+    <None Update="csv/*.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
