@@ -62,7 +62,7 @@ public static class Flighty
 			selectCmd.Parameters.AddWithValue("@date", flight.Date);
 			selectCmd.Parameters.AddWithValue("@origin", flight.Origin);
 			selectCmd.Parameters.AddWithValue("@dest", flight.Destination);
-			selectCmd.Parameters.AddWithValue("@diversion", flight.Diversion);
+			selectCmd.Parameters.AddWithValue("@diversion", flight.Diversion ?? (object)DBNull.Value);
 
 			using var readerDb = selectCmd.ExecuteReader();
 			if (readerDb.Read())
