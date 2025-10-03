@@ -55,13 +55,14 @@ public static class Flighty
 					FlightNumber = @fno AND
 					Date = @date AND
 					Origin = @origin AND
-					Destination = @dest
+					(Destination = @dest or Destination = @diversion)
             ", conn, transaction);
 			selectCmd.Parameters.AddWithValue("@airline_icao", flight.Airline);
 			selectCmd.Parameters.AddWithValue("@fno", flight.FlightNumber);
 			selectCmd.Parameters.AddWithValue("@date", flight.Date);
 			selectCmd.Parameters.AddWithValue("@origin", flight.Origin);
 			selectCmd.Parameters.AddWithValue("@dest", flight.Destination);
+			selectCmd.Parameters.AddWithValue("@diversion", flight.Diversion);
 
 			using var readerDb = selectCmd.ExecuteReader();
 			if (readerDb.Read())

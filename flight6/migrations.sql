@@ -89,3 +89,16 @@ BEGIN TRANSACTION;
 ALTER TABLE dbo.flights5
 ALTER COLUMN Terminal NVARCHAR(50) NULL;
 commit;
+
+BEGIN TRANSACTION;
+-- ADO, EZY, JNA, ASV, JSA, SWE, AWE
+
+update dbo.airlines set IcaoCode = 'ADO', Name = 'AIRDO Co., Ltd.' where IataCode = 'HD';
+update dbo.airlines set IcaoCode = 'EZY', Name = 'EasyJet plc' where IataCode = 'U2';
+update dbo.airlines set IcaoCode = 'JNA', Name = 'Jin Air Co., Ltd.' where IataCode = 'LJ';
+update dbo.airlines set IcaoCode = 'ASV', Name = 'Air Seoul' where IataCode = 'RS';
+update dbo.airlines set IcaoCode = 'JSA', Name = 'Jetstar Asia' where IataCode = '3K';
+update dbo.airlines set IcaoCode = 'SWA', Name = 'Southwest Airlines Co.' where IataCode = 'WN';
+update dbo.airlines set IcaoCode = 'AWE', Name = 'US Airways' where IataCode = 'US';
+
+commit;
