@@ -101,7 +101,9 @@ public static class Flighty
 			}
 			else
 			{
+				if (flight.Date > DateTime.Now.Date) { continue; }
 				if (wroteDot) { Console.WriteLine(); wroteDot = false; }
+				Console.WriteLine($"MISSING: {flight.Airline}{flight.FlightNumber} {flight.Date} {flight.Origin}-{flight.Destination}");
 			}
 		}
 		Console.WriteLine();
